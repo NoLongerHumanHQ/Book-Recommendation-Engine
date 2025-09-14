@@ -1,146 +1,76 @@
-Book Recommendation Engine
+# Book Recommendation Engine
 
-This project is a comprehensive book recommendation system built using Streamlit. It suggests books to users based on their preferences using multiple recommendation algorithms.
-Features
+This project is a comprehensive book recommendation system built with **Streamlit**. It suggests books to users based on their preferences using multiple recommendation algorithms.
 
-    Multiple recommendation methods including content-based filtering, collaborative filtering, popularity-based recommendations, and a hybrid approach
+## Features
+- Multiple recommendation methods: content-based, collaborative, popularity-based, and hybrid  
+- Interactive UI for book search, filtering, and rating  
+- Favorites and reading-list management  
+- Detailed book pages with cover images  
+- Visualizations for genre distribution, rating trends, and recommendation confidence  
+- User profiles with rating history  
 
-    Interactive user interface for book searching, filtering, and rating
+## Technologies Used
+- Python 3.8+  
+- Streamlit (web interface)  
+- Scikit-learn, Pandas, NumPy (data processing & ML)  
 
-    Favorites and reading list management system
+## Getting Started
 
-    Detailed book information with cover images
+### Prerequisites
+- Python 3.8 or higher  
+- pip package manager  
 
-    Data visualizations for genre distributions, ratings, and recommendation confidence
-
-    User profiles with rating history tracking
-
-Technologies Used
-
-    Python 3.8+
-
-    Streamlit for web interface
-
-    Machine learning algorithms for recommendations
-
-    Data processing libraries
-
-Getting Started
-Prerequisites
-
-    Python 3.8 or higher
-
-    pip package manager
-
-Installation
-
-    Clone the repository:
-
-text
+### Installation
 git clone https://github.com/NoLongerHumanHQ/Book-Recommendation-Engine.git
 cd Book-Recommendation-Engine
-
-Install required dependencies:
-
-text
 pip install -r requirements.txt
-
-Run the Streamlit application:
-
-text
 streamlit run app.py
 
-Open your web browser and navigate to:
+Open your browser at `http://localhost:8501`.
 
-    text
-    http://localhost:8501
+## Data
+Dataset of 100+ books containing  
+*Title, Author, Genre, Subgenre, Year, ISBN, Page Count, Description, Avg Rating, Ratings Count, Cover URL, Series, Reading Level.*
 
-Data
+## Recommendation Methods
+- **Content-Based:** TF-IDF + cosine similarity on book features  
+- **Collaborative Filtering:** User-based rating similarity  
+- **Popularity-Based:** Trending and highly rated books  
+- **Hybrid:** Weighted combination of all methods  
 
-The application uses a dataset of over 100 popular books containing:
-
-    Title, author, genre, and subgenre information
-
-    Publication year, ISBN, and page count
-
-    Book descriptions and average ratings
-
-    Cover image URLs and series information
-
-    Reading level classifications
-
-Recommendation Methods
-Content-Based Filtering
-
-Recommends books based on similarity between book features such as title, author, genre, and description using TF-IDF and cosine similarity algorithms.
-Collaborative Filtering
-
-Suggests books based on ratings from users with similar reading preferences and patterns.
-Popularity-Based Recommendations
-
-Recommends trending and highly-rated books based on overall popularity metrics.
-Hybrid Approach
-
-Combines all recommendation methods with configurable weights to provide more accurate suggestions.
-Project Structure
-
-text
+## Project Structure
 book_recommendation_engine/
-├── app.py                    # Main Streamlit application
+├── app.py # Streamlit app
 ├── data/
-│   ├── books.csv            # Book dataset
-│   └── user_ratings.json    # User ratings storage
+│ ├── books.csv # Book dataset
+│ └── user_ratings.json # Stored user ratings
 ├── utils/
-│   ├── data_loader.py       # Data loading functions
-│   ├── recommender.py       # Recommendation algorithms
-│   └── visualizations.py    # Chart and graph functions
+│ ├── data_loader.py # Load & preprocess data
+│ ├── recommender.py # Algorithms
+│ └── visualizations.py # Charts
 ├── assets/
-│   └── book_covers/         # Book cover images
-├── requirements.txt         # Python dependencies
-└── README.md               # Project documentation
+│ └── book_covers/ # Optional images
+├── requirements.txt
+└── README.md
 
-How to Use
 
-    Home Page: Browse overview and popular books
+## Usage
+1. **Home:** View popular books  
+2. **Search Books:** Filter by genre, author, year, rating  
+3. **Profile:** Manage ratings, favorites, reading list  
+4. **Recommendations:** Get personalized suggestions  
+5. **Explore:** Browse by genre and popularity  
 
-    Search Books: Search and filter books by various criteria
+## Customization
+- Adjust algorithm weights and filters in the sidebar  
+- Add or replace the `books.csv` dataset to extend recommendations  
 
-    User Profile: Manage ratings, favorites, and reading lists
+## Contributing
+Pull requests are welcome. Please open an issue first to discuss significant changes.
 
-    Recommendations: Get personalized book suggestions
+## License
+MIT License
 
-    Explore Books: Browse by genre, ratings, and publication year
-
-Customization
-
-    Adjust recommendation algorithm parameters through the sidebar
-
-    Filter books by genre, publication year, and minimum rating
-
-    Choose between different recommendation methods
-
-    Modify weights for the hybrid recommendation approach
-
-Contributing
-
-Contributions are welcome. Please feel free to:
-
-    Report bugs and issues
-
-    Suggest new features
-
-    Submit pull requests
-
-    Improve documentation
-
-License
-
-This project is licensed under the MIT License.
-Author
-
-Created by NoLongerHumanHQ for educational and practical purposes.
-Acknowledgments
-
-    Book data compiled from various public sources
-
-    Cover images sourced from Goodreads API
+## Author
+Created by **NoLongerHumanHQ**.
